@@ -8,9 +8,19 @@
 
 @code {
     private int currentCount = 0;
+    private bool shouldRender;
+
+    protected override bool ShouldRender() => shouldRender;
+
+    protected override void OnAfterRender(bool first)
+    {
+        shouldRender = false;
+    }
 
     private void IncrementCount()
     {
         currentCount++;
+
+        shouldRender = true;
     }
 }
