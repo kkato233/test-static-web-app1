@@ -12,7 +12,11 @@
 
 <body>
     <app>Loading...</app>
-    <img src="Eclipse-1s-200px.svg" />
+    <script>
+    if (self.fetch ? true : false) {
+	    document.write("<img src='Eclipse-1s-200px.svg' />");
+    }
+    </script>
     <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="" class="reload">Reload</a>
